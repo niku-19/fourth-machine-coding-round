@@ -34,7 +34,10 @@ const PostCard = ({ post, showComment }) => {
               style={{ fill: post.isActiveUpvote ? "blueviolet" : "#ccc" }}
               onClick={handleUpVote}
             />
-            <span>{post?.upvotes}</span>
+            {post?.upvotes > post?.downvotes && <span>{post?.upvotes}</span>}
+            {post?.upvotes <= post?.downvotes && (
+              <span>{post?.downvotes - post?.upvotes}</span>
+            )}
 
             <BiSolidDownArrow
               className={styles.icon}
