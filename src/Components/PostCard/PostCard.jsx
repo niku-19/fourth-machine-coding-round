@@ -36,7 +36,7 @@ const PostCard = ({ post, showComment }) => {
             />
             {post?.upvotes > post?.downvotes && <span>{post?.upvotes}</span>}
             {post?.upvotes <= post?.downvotes && (
-              <span>{post?.downvotes - post?.upvotes}</span>
+              <span>{post?.upvotes - post?.downvotes}</span>
             )}
 
             <BiSolidDownArrow
