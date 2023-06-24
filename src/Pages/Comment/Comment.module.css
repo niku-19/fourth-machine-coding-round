@@ -1,0 +1,7 @@
+.landing__container {
+  max-width: 85%;
+  height: calc(100vh - 20rem);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+}
