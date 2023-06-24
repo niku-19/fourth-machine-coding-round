@@ -72,7 +72,16 @@ const PostCard = ({ post, showComment }) => {
             to={`/comment/${post.postId}`}
             className={styles.share__icons}
           >
-            <BiComment className={styles.share__icons} />
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "5px",
+              }}
+            >
+              <BiComment className={styles.share__icons} />
+              <span>{post?.comments?.length}</span>
+            </div>
           </NavLink>
           <BiSolidShareAlt className={styles.share__icons} />
           <BiSolidBookmark
